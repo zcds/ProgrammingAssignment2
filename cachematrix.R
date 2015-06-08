@@ -5,8 +5,8 @@
 ## computation.
 
 ## For a given matrix parameter x, this function
-## returns a special "matrix" (actually a list) have the following
-## function typ elements:
+## returns a special "matrix" (actually a list) having the following
+## function type elements:
 ## 1. setMatrix: set the matrix
 ## 2. getMatrix: get the matrix
 ## 3. setMatrixInverse: set the matrix inverse
@@ -33,7 +33,8 @@ makeCacheMatrix <- function(x = matrix()) {
   getMatrixInverse <- function() inverse
   
   # return the special "matrix" 
-  list(setMatrix = setMatrix, getMatrix = getMatrix,
+  list(setMatrix = setMatrix, 
+       getMatrix = getMatrix,
        setMatrixInverse = setMatrixInverse,
        getMatrixInverse = getMatrixInverse)
 }
@@ -41,7 +42,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## This function computes the inverse of the special "matrix" returned by makeCacheMatrix.
 ## If the inverse has already been calculated (and the matrix has not changed), 
-## then the cachesolve should retrieve the inverse from the cache.
+## then the cacheSolve should retrieve the inverse from the cache.
 
 cacheSolve <- function(x, ...) {
   # get the matrix inverse from the special "matrix" object
